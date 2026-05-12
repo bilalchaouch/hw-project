@@ -12,43 +12,43 @@
 const questionBank = [
   {
     keywords: ["who", "alex", "about", "yourself"],
-    answer: "Alex Ionescu is a second-year Computer Science student at the West University of Timișoara (UVT). He specialises in frontend development and UI/UX design — building accessible, well-crafted web interfaces."
+    answer: "Bilal Chaouch is a second-year Artificial Intelligence student at the West University of Timișoara (UVT). He specialises in Artificial Intelligence — building accessible, well-crafted web interfaces."
   },
   {
     keywords: ["skill", "know", "good at", "technology", "tech", "top"],
-    answer: "Alex's top skills include: HTML5 & CSS3 (9/10), Figma (8/10), Git & GitHub (8/10), JavaScript ES6+ (7/10), and Python (6/10). He's also passionate about web accessibility and WCAG standards."
+    answer: "Bilal's top skills include: HTML5 & CSS3 (9/10), Figma (8/10), Git & GitHub (8/10), JavaScript ES6+ (7/10), and Python (6/10). He's also passionate about web accessibility and WCAG standards."
   },
   {
     keywords: ["project", "work", "portfolio", "built", "made"],
-    answer: "Alex's key projects include: a Personal Portfolio (HTML/CSS/JS), an E-Commerce Redesign (boosted conversions +34%), the CSS Utility Kit (open-source, v1.2), and a Study Sprint Planner. See the Projects page for the full list!"
+    answer: "Bilal's key projects include: a Personal Portfolio (HTML/CSS/JS), an E-Commerce Redesign (boosted conversions +34%), the CSS Utility Kit (open-source, v1.2), and a Study Sprint Planner. See the Projects page for the full list!"
   },
   {
     keywords: ["contact", "reach", "email", "hire", "get in touch"],
-    answer: "You can reach Alex at alex.ionescu@e-uvt.ro, or use the Contact page to send a message. He's open to freelance projects, internships, and collaborations."
+    answer: "You can reach Bilal at bilal.chaouch11@e-uvt.ro, or use the Contact page to send a message. He's open to freelance projects, internships, and collaborations."
   },
   {
     keywords: ["education", "study", "university", "uvt", "degree", "school"],
-    answer: "Alex is studying for a BSc in Computer Science at the West University of Timișoara (UVT), currently in Year 2. He completed his Baccalaureate at Colegiul Național 'C.D. Loga' in Timișoara with a 9.60 average."
+    answer: "Bilal is studying for a BSc in Computer Science at the West University of Timișoara (UVT), currently in Year 2. He completed his Baccalaureate at Colegiul Național 'C.D. Loga' in Timișoara with a 9.60 average."
   },
   {
     keywords: ["internship", "experience", "work", "job"],
-    answer: "Alex completed a Frontend Internship at StartupRO (Cluj-Napoca) in Summer 2025, where he built responsive landing pages and maintained the company's Figma design system."
+    answer: "Bilal completed a Frontend Internship at StartupRO (Cluj-Napoca) in Summer 2025, where he built responsive landing pages and maintained the company's Figma design system."
   },
   {
     keywords: ["figma", "design", "ui", "ux"],
-    answer: "Alex uses Figma for wireframing, UI design, and design tokens. He's familiar with reusable components, auto-layout, and exporting CSS. Rating: 8/10."
+    answer: "Bilal uses Figma for wireframing, UI design, and design tokens. He's familiar with reusable components, auto-layout, and exporting CSS. Rating: 8/10."
   },
   {
     keywords: ["github", "repository", "repo", "code", "open source"],
-    answer: "You can find Alex's open-source work at github.com/alexionescu — including the CSS Utility Kit and this portfolio project."
+    answer: "You can find Bilal's open-source work at github.com/bilalchaouch — including the CSS Utility Kit and this portfolio project."
   },
   {
     keywords: ["hello", "hi", "hey", "howdy", "greetings"],
-    answer: "Hello! 👋 Great to meet you. I'm Alex's portfolio assistant. Ask me about his skills, projects, education, or how to contact him!"
+    answer: "Hello! 👋 Great to meet you. I'm Bilal's portfolio assistant. Ask me about his skills, projects, education, or how to contact him!"
   },
   {
     keywords: ["thank", "thanks", "great", "awesome", "nice"],
-    answer: "You're welcome! 😊 Is there anything else you'd like to know about Alex?"
+    answer: "You're welcome! 😊 Is there anything else you'd like to know about Bilal?"
   }
 ];
 
@@ -56,7 +56,7 @@ const questionBank = [
 // FALLBACK RESPONSES
 // ==============================
 const fallbacks = [
-  "Hmm, I'm not sure about that one. Try asking about Alex's skills, projects, education, or contact details!",
+  "Hmm, I'm not sure about that one. Try asking about Bilal's skills, projects, education, or contact details!",
   "I don't have that info handy — but you could check the About or Projects pages for more details.",
   "That's a bit outside my knowledge! Try: 'What are your skills?' or 'Tell me about your projects'."
 ];

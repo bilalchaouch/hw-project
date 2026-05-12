@@ -1,6 +1,6 @@
 CSS SPECIFICITY EXERCISE — ANSWERS
 ===================================
-Alex Ionescu — Web Technologies, UVT 2026
+Bilal Chaouch — Web Technologies, UVT 2026
 Source: Lab 4 - Exercise 1 (CSS Specificity Game)
 
 ---
@@ -67,5 +67,5 @@ KEY TAKEAWAYS:
 ---
 File: specificity.txt
 Course: Web Technologies — UVT
-Student: Alex Ionescu
+Student: Bilal Chaouch
 Date: 2026
