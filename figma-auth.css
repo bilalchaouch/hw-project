@@ -1,0 +1,187 @@
+/* figma-auth.css
+   Exported from Figma — Authentication UI Frame
+   HW2 Requirement: save exported CSS from Figma authentication interface
+   
+   Design tokens used:
+   - Text styles: Heading/700 (Playfair Display 24px) + Body/400 (DM Sans 14px)
+   - Colors: Brand/Gold (#C8A96E), Surface/Dark (#161616), Text/Primary (#F0ECE4)
+   - Spacing scale: 8 / 16 / 24 / 48px
+*/
+
+/* === FRAME: Authentication — Two-panel layout === */
+.auth-frame {
+  display: flex;
+  width: 800px;
+  height: 520px;
+  background: #0d0d0d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* === LEFT PANEL: Branding === */
+.auth-brand-panel {
+  width: 340px;
+  background: #161616;
+  border-right: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  gap: 16px;
+}
+
+.auth-brand-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #c8a96e;
+  line-height: 1.2;
+}
+
+.auth-brand-tagline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9a9080;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === RIGHT PANEL: Form === */
+.auth-form-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  gap: 24px;
+}
+
+.auth-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f0ece4;
+  margin: 0;
+}
+
+.auth-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #9a9080;
+  margin: 0;
+}
+
+/* === FORM FIELDS === */
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #f0ece4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.auth-input {
+  background: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: #f0ece4;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px 16px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #c8a96e;
+  box-shadow: 0 0 0 3px rgba(200, 169, 110, 0.15);
+}
+
+/* === BUTTON COMPONENT (reused in at least 2 places) === */
+/* Primary Button */
+.btn-auth-primary {
+  background: #c8a96e;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-auth-primary:hover {
+  background: #e8c98a;
+}
+
+.btn-auth-primary:active {
+  transform: scale(0.98);
+}
+
+/* Secondary/Ghost Button (same component, variant) */
+.btn-auth-secondary {
+  background: transparent;
+  color: #c8a96e;
+  border: 1px solid #c8a96e;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-auth-secondary:hover {
+  background: rgba(200, 169, 110, 0.1);
+}
+
+/* === DIVIDER === */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2a2a2a;
+  font-size: 12px;
+  color: #9a9080;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #2a2a2a;
+}
+
+/* === LINK === */
+.auth-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #c8a96e;
+  text-align: center;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: #e8c98a;
+  text-decoration: underline;
+}

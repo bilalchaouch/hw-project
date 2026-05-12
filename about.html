@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Alex Ionescu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Internal CSS (HW2 requirement: demonstrate internal CSS placement) -->
+  <style>
+    .about-photo-placeholder {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--color-surface-2);
+      border: 3px solid var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+    .skills-list li {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .timeline {
+      border-left: 2px solid var(--color-border);
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .timeline-item h3 {
+      margin-bottom: 0.2rem;
+    }
+    .timeline-item .year {
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <a href="index.html" class="site-title">Alex Ionescu</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="data.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html">Assistant</a></li>
+        <li><a href="card.html">Card</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section aria-labelledby="about-heading">
+      <div class="about-photo-placeholder" aria-hidden="true">🧑‍💻</div>
+      <h1 id="about-heading">About Me</h1>
+      <p>I'm Alex Ionescu, a second-year Computer Science student at the West University of Timișoara. I specialise in frontend development and UI/UX design — building interfaces that are not only functional, but genuinely enjoyable to use.</p>
+      <p>When I'm not coding, you'll find me reading about design systems, contributing to open-source projects, or organising study sprints with my study group.</p>
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3 / Flexbox / Grid</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Figma</li>
+        <li>Git &amp; GitHub</li>
+        <li>Accessibility (WCAG)</li>
+        <li>React (basics)</li>
+        <li>Python</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="edu-heading">
+      <h2 id="edu-heading">Education &amp; Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="year">2024 – Present</span>
+          <h3>BSc Computer Science — West University of Timișoara</h3>
+          <p>Core modules: Web Technologies, Algorithms, Databases, OOP.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">Summer 2025</span>
+          <!-- Inline CSS demo (HW2 requirement) -->
+          <h3 style="color: var(--color-accent-light);">Frontend Intern — StartupRO, Cluj-Napoca</h3>
+          <p>Built responsive landing pages and maintained the company's design system in Figma.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2023 – 2024</span>
+          <h3>Baccalaureate — Colegiul Național "C.D. Loga", Timișoara</h3>
+          <p>Mathematics &amp; Informatics profile. Graduated with 9.60.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Ionescu · Personal Portfolio · Web Technologies — UVT</p>
+  </footer>
+
+</body>
+</html>

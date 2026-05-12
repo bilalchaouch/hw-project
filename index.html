@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Ionescu — Personal Brand Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <a href="index.html" class="site-title">Alex Ionescu</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html">Assistant</a></li>
+        <li><a href="card.html">Card</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <p class="hero-sub">Frontend Developer &amp; Designer</p>
+      <h1 id="hero-heading">Building digital<br>experiences that matter.</h1>
+      <p>I craft clean, accessible, and thoughtfully designed web interfaces. Based in Timișoara, Romania — open to opportunities worldwide.</p>
+      <a href="about.html" class="btn" style="display:inline-block; margin-top:1rem; text-decoration:none;">View My Work →</a>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Projects</h2>
+      <div class="cards-grid">
+        <article class="card featured">
+          <p class="card-tag">Case Study</p>
+          <h3>E-Commerce Redesign</h3>
+          <p>Full UX audit and interface redesign for a local bookshop, increasing mobile conversions by 34%.</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">Web App</p>
+          <h3>Study Sprint Planner</h3>
+          <p>A Pomodoro-based study tracker with session analytics built in vanilla JS.</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">Open Source</p>
+          <h3>CSS Utility Kit</h3>
+          <p>A lightweight, accessible utility library with zero runtime dependencies.</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">Design System</p>
+          <h3>UVT Design Tokens</h3>
+          <p>A Figma token system used across 3 student-led projects at UVT.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="news-heading">
+      <h2 id="news-heading">Latest Updates</h2>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem;">
+        <li style="border-left:2px solid var(--color-accent); padding-left:1rem;">
+          <strong>May 2026</strong> — Completed HW2 for Web Technologies at UVT.
+        </li>
+        <li style="border-left:2px solid var(--color-border); padding-left:1rem;">
+          <strong>April 2026</strong> — Released CSS Utility Kit v1.2 on GitHub.
+        </li>
+        <li style="border-left:2px solid var(--color-border); padding-left:1rem;">
+          <strong>March 2026</strong> — Speaker at Timișoara Web Meetup #12.
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Ionescu · Personal Portfolio · Web Technologies — UVT</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Overview — Alex Ionescu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* === OVERVIEW PAGE — Grid + Flexbox layout (HW2) === */
+
+    /* Mobile-first: single column */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Desktop: 3-column grid */
+    @media (min-width: 768px) {
+      .overview-grid {
+        grid-template-columns: 280px 1fr 220px;
+      }
+    }
+
+    /* Sidebar uses Flexbox internally */
+    .profile-sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--color-surface-2);
+      border: 3px solid var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .profile-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0;
+    }
+
+    .profile-role {
+      color: var(--color-accent);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .profile-desc {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      max-width: 100%;
+    }
+
+    /* === PROJECT CARDS (Grid) === */
+    .projects-section h2 {
+      margin-top: 0;
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .project-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* nth-child: highlight 2nd card */
+    .project-card:nth-child(2) {
+      border-color: #6e9ec8;
+      border-left: 3px solid #6e9ec8;
+    }
+
+    .project-card.highlight {
+      background: var(--color-surface-2);
+      border-color: var(--color-accent);
+      border-left: 3px solid var(--color-accent);
+    }
+
+    /* === CONTACT ASIDE — Flexbox column === */
+    .contact-aside {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-aside h2 {
+      font-size: 1rem;
+      margin-top: 0;
+      border: none;
+      padding: 0;
+      color: var(--color-accent);
+    }
+
+    .contact-aside a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-aside a:hover {
+      color: var(--color-accent);
+    }
+
+    .skills-bar-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2px;
+    }
+
+    .skill-bar {
+      height: 6px;
+      background: var(--color-surface-2);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: var(--color-accent);
+      border-radius: 3px;
+      transition: width 0.6s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <a href="index.html" class="site-title">Alex Ionescu</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html" aria-current="page">Overview</a></li>
+        <li><a href="chatbot.html">Assistant</a></li>
+        <li><a href="card.html">Card</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Portfolio Overview</h1>
+    <p>A responsive profile overview — built with CSS Grid (main layout) and Flexbox (internal areas). Resize the window to see the layout adapt.</p>
+
+    <div class="overview-grid">
+
+      <!-- LEFT: Profile sidebar (Flexbox) -->
+      <aside class="profile-sidebar" aria-label="Profile">
+        <div class="avatar" aria-hidden="true">🧑‍💻</div>
+        <p class="profile-name">Alex Ionescu</p>
+        <p class="profile-role">Frontend Developer · Year 2</p>
+        <p class="profile-desc">CS student at UVT passionate about accessible, well-crafted web interfaces and design systems.</p>
+
+        <section aria-labelledby="skills-ov-heading">
+          <h2 id="skills-ov-heading" style="font-size:0.85rem; color:var(--color-accent); text-transform:uppercase; letter-spacing:0.08em; margin:0 0 0.5rem; border:none; padding:0;">Skills</h2>
+          <div class="skills-bar-group">
+            <div>
+              <div class="skill-bar-label"><span>HTML / CSS</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>JavaScript</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>Figma</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+            </div>
+            <div>
+              <div class="skill-bar-label"><span>Python</span><span>60%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:60%"></div></div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- CENTRE: Projects (Grid) -->
+      <section class="projects-section" aria-labelledby="projects-ov-heading">
+        <h2 id="projects-ov-heading">Selected Projects</h2>
+        <div class="project-cards">
+          <article class="card project-card highlight">
+            <p class="card-tag">Featured</p>
+            <h3>Personal Portfolio (HW1+HW2)</h3>
+            <p>Multi-page accessible site with JS interactivity and responsive layout.</p>
+          </article>
+          <article class="card project-card">
+            <p class="card-tag">Freelance</p>
+            <h3>E-Commerce Redesign</h3>
+            <p>Mobile-first redesign boosting conversions by 34%.</p>
+          </article>
+          <article class="card project-card">
+            <p class="card-tag">Personal</p>
+            <h3>Study Sprint Planner</h3>
+            <p>Pomodoro tracker with session analytics.</p>
+          </article>
+          <article class="card project-card">
+            <p class="card-tag">Open Source</p>
+            <h3>CSS Utility Kit</h3>
+            <p>Zero-dependency CSS utility library, v1.2.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- RIGHT: Contact aside (Flexbox) -->
+      <aside class="contact-aside" aria-label="Contact details">
+        <h2>Contact</h2>
+        <a href="mailto:alex@example.com">✉️ alex@example.com</a>
+        <a href="https://github.com/alexionescu" target="_blank" rel="noopener">🐙 github.com/alexionescu</a>
+        <a href="https://linkedin.com/in/alexionescu" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="contact.html">📬 Send a message</a>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Ionescu · Personal Portfolio · Web Technologies — UVT</p>
+  </footer>
+
+</body>
+</html>

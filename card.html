@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Card — Alex Ionescu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="card.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <a href="index.html" class="site-title">Alex Ionescu</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html">Assistant</a></li>
+        <li><a href="card.html" aria-current="page">Card</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Digital Business Card</h1>
+    <p>A minimal, shareable digital card — demonstrating element, class, and ID selectors in CSS.</p>
+
+    <!-- ID selector: #business-card -->
+    <div id="business-card">
+      <!-- Element selector: img -->
+      <img src="assets/avatar.svg" alt="Alex Ionescu avatar illustration" class="card-avatar" />
+      <!-- Class selector: .card-info -->
+      <div class="card-info">
+        <h2 class="card-name">Alex Ionescu</h2>
+        <p class="card-spec">Frontend Developer · Computer Science, Year 2 · UVT</p>
+        <div class="card-links">
+          <a href="mailto:alex.ionescu@e-uvt.ro" class="card-link email-link">✉ alex.ionescu@e-uvt.ro</a>
+          <a href="https://github.com/alexionescu" target="_blank" rel="noopener" class="card-link github-link">🐙 github.com/alexionescu</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Ionescu · Personal Portfolio · Web Technologies — UVT</p>
+  </footer>
+
+</body>
+</html>

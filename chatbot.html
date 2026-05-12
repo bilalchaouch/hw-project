@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Assistant — Alex Ionescu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <a href="index.html" class="site-title">Alex Ionescu</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="chatbot.html" aria-current="page">Assistant</a></li>
+        <li><a href="card.html">Card</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Portfolio Assistant</h1>
+    <p>Ask me anything about Alex's skills, projects, or experience. Try one of the suggested questions below or type your own.</p>
+
+    <div class="suggestions" aria-label="Suggested questions">
+      <button class="suggestion-btn" type="button" data-q="Who is Alex?">Who is Alex?</button>
+      <button class="suggestion-btn" type="button" data-q="What are your top skills?">Top skills?</button>
+      <button class="suggestion-btn" type="button" data-q="Tell me about your projects">Projects?</button>
+      <button class="suggestion-btn" type="button" data-q="How can I contact Alex?">Contact?</button>
+      <button class="suggestion-btn" type="button" data-q="What is your education?">Education?</button>
+    </div>
+
+    <div class="chat-container" role="log" aria-live="polite" aria-label="Chat conversation">
+      <div class="chat-log" id="chat-log">
+        <div class="chat-msg bot">
+          👋 Hello! I'm Alex's portfolio assistant. Ask me about his skills, projects, or how to get in touch!
+        </div>
+      </div>
+      <form class="chat-form" id="chat-form" novalidate>
+        <label for="chat-input" class="sr-only">Your message</label>
+        <input
+          type="text"
+          id="chat-input"
+          name="chat-input"
+          placeholder="Type a question…"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn" style="white-space:nowrap;">Send ↵</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Alex Ionescu · Personal Portfolio · Web Technologies — UVT</p>
+  </footer>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
