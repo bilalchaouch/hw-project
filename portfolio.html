@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bilal Chaouch portfolio – add and browse personal projects." />
+  <title>Portfolio | Bilal Chaouch</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Bilal Chaouch – Home">
+        <span class="logo-initials" aria-hidden="true">BC</span>
+        <span class="logo-name">Bilal Chaouch</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <h1 id="portfolio-heading">My <em>Projects</em></h1>
+        <p class="page-sub">Add your projects below and they'll appear in the table instantly.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT FORM ===== -->
+    <section class="form-section" aria-labelledby="form-heading">
+      <div class="container">
+        <h2 id="form-heading" class="section-title">Add a Project</h2>
+
+        <!-- Live region for form submission feedback -->
+        <div id="form-status" role="status" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+
+        <form id="project-form" class="project-form" novalidate aria-describedby="form-hint">
+          <p id="form-hint" class="form-hint">Fields marked with <span aria-hidden="true">*</span><span class="visually-hidden">asterisk</span> are required.</p>
+
+          <fieldset>
+            <legend>Project Details</legend>
+
+            <!-- Project Name -->
+            <div class="field-group">
+              <label for="proj-name">Project Name <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="proj-name"
+                name="proj-name"
+                autocomplete="off"
+                required
+                aria-required="true"
+                aria-describedby="proj-name-error"
+                placeholder="e.g. Weather Dashboard"
+              />
+              <span class="field-error" id="proj-name-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <!-- Description -->
+            <div class="field-group">
+              <label for="proj-desc">Description <span aria-hidden="true">*</span></label>
+              <textarea
+                id="proj-desc"
+                name="proj-desc"
+                required
+                aria-required="true"
+                aria-describedby="proj-desc-error proj-desc-hint"
+                placeholder="Briefly describe what this project does…"
+                rows="4"
+                maxlength="300"
+              ></textarea>
+              <span class="field-hint" id="proj-desc-hint">Max 300 characters.</span>
+              <span class="field-error" id="proj-desc-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <!-- URL -->
+            <div class="field-group">
+              <label for="proj-url">Project URL <span aria-hidden="true">*</span></label>
+              <input
+                type="url"
+                id="proj-url"
+                name="proj-url"
+                required
+                aria-required="true"
+                aria-describedby="proj-url-error"
+                placeholder="https://github.com/username/repo"
+              />
+              <span class="field-error" id="proj-url-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <!-- Technologies -->
+            <div class="field-group">
+              <label for="proj-tech">Technologies Used <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="proj-tech"
+                name="proj-tech"
+                required
+                aria-required="true"
+                aria-describedby="proj-tech-error proj-tech-hint"
+                placeholder="HTML, CSS, JavaScript"
+              />
+              <span class="field-hint" id="proj-tech-hint">Comma-separated list of technologies.</span>
+              <span class="field-error" id="proj-tech-error" role="alert" aria-live="assertive"></span>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Info</legend>
+
+            <!-- Category -->
+            <div class="field-group">
+              <label for="proj-category">Category <span aria-hidden="true">*</span></label>
+              <select
+                id="proj-category"
+                name="proj-category"
+                required
+                aria-required="true"
+                aria-describedby="proj-category-error"
+              >
+                <option value="">— Select a category —</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Game Development">Game Development</option>
+                <option value="DevOps / Tools">DevOps / Tools</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="field-error" id="proj-category-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <!-- Completion Date -->
+            <div class="field-group">
+              <label for="proj-date">Completion Date <span aria-hidden="true">*</span></label>
+              <input
+                type="date"
+                id="proj-date"
+                name="proj-date"
+                required
+                aria-required="true"
+                aria-describedby="proj-date-error"
+              />
+              <span class="field-error" id="proj-date-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <!-- Image URL (optional) -->
+            <div class="field-group">
+              <label for="proj-image">Thumbnail Image URL <span class="optional-tag">(optional)</span></label>
+              <input
+                type="url"
+                id="proj-image"
+                name="proj-image"
+                aria-describedby="proj-image-error proj-image-hint"
+                placeholder="https://example.com/screenshot.png"
+              />
+              <span class="field-hint" id="proj-image-hint">Direct link to a project screenshot or logo.</span>
+              <span class="field-error" id="proj-image-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <!-- Status -->
+            <div class="field-group">
+              <fieldset class="inline-fieldset">
+                <legend>Project Status</legend>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="proj-status" value="Completed" checked />
+                    Completed
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="proj-status" value="In Progress" />
+                    In Progress
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="proj-status" value="Archived" />
+                    Archived
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Add Project</button>
+            <button type="reset" class="btn btn-ghost" id="reset-btn">Reset Form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS TABLE ===== -->
+    <section class="table-section" id="projects-section" aria-labelledby="table-heading">
+      <div class="container">
+        <h2 id="table-heading" class="section-title">Submitted Projects</h2>
+
+        <p id="empty-state" class="empty-state" aria-live="polite">
+          No projects yet. Fill in the form above to add your first project!
+        </p>
+
+        <div class="table-wrapper" id="table-wrapper" hidden>
+          <table id="projects-table" aria-describedby="table-caption-desc">
+            <caption>
+              <strong>My Project Portfolio</strong>
+              <span id="table-caption-desc" class="caption-sub"> — projects added through the form below.</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Project Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">URL</th>
+                <th scope="col">Technologies</th>
+                <th scope="col">Category</th>
+                <th scope="col">Status</th>
+                <th scope="col">Completed</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="projects-tbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Bilal Chaouch. Built with semantic HTML5, CSS3 &amp; vanilla JS.</p>
+      <a href="https://github.com/bilalchaouch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Bilal Chaouch">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
